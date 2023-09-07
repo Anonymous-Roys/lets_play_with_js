@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <p id="demo"></p>
+	<label for="name"m>Enter your name: </label>
+	<input type="text" id="input" name="name">
+	<button type="button" id ="button"> CLICK HERE</button><br/>
+	<label id = "a">Side A</label><br/>
+	<input type="text" id="at"><br/>
+	<label id = "b">Side B</label><br/>
+	<input type="text" id="bt"><br/>
+    <button id="submit" onclick="submit()">Submit</button><br/>
+	<label id = "c">Side C: </label><br/>
+    
+    <!-- ------counter Program----- -->
+<div id = "countCard">
+	<div class="counter">
+		<label for="label" id="countlabel">0</label>
+		<button id ="decrease" onclick="decrease()">decrease</button>
+		<button id ="reset" onclick="reset()">reset</button>
+		<button id ="increase" onclick="increase()">increase</button>
+
+	</div>
+
+	<div>
+		<label for="checkbox">David</label>	
+		<input type="checkbox" id="checkbox"><br/>
+
+
+		<label for=""visaBtn>Visa</label>
+		<input type="radio" name="card" id="visaBtn"><br/>
+		<label for=""masterCardBtn>Master Card</label>
+		<input type="radio" name="card" id="masterCardBtn"><br/>
+		<label for=""paypalBtn>Paypal</label>
+		<input type="radio" name="card" id="paypalBtn"><br/>
+
+		<button id="checkbutton" for="checkbox">Submit</button>
+	</div>
+
+<label id="myColumn"></label>
+	<div id="guessingGame">
+		<h3>Hi, Welcome to a guessing game</h3>
+		<p>Guess a number(positive integers) from <b>1 to 10</b></p>
+		<p>You have only three attempts</p>
+		<label for="" >Guess: </label>
+		<input type="text" id="inputGuess">
+		<p id="display"></p>
+		<button type="submit" id="submitbtn" onclick="guessingGame()">Click To Guess</button>
+	</div>
+	<div>
+		<label for="">Enter a temperature</label>
+		<input type="text" id="tempValue">
+		<p>convert to:</p>
+		<input type="radio" name="temp" id="celsius">
+		<label for="temp">Celsius</label><br/>
+		<input type="radio" name="temp" id="fahrenheit">
+		<label for="temp">Fahrenheit</label><br/>
+		<button type="submit" onclick="tempConverter()">Submit</button>
+		<p id="tempAns"></p>
+	</div>
+
+</div>
+	<script src="msjs.js"></script>
+</body>
+</html>

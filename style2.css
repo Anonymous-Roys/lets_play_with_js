@@ -1,0 +1,67 @@
+body{
+    background-color: rgb(155, 145, 145);
+    color: rgb(0, 0, 0);
+}
+#main{
+    /*background-color: aquamarine;*/
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 2S0vh;
+}
+#mine{
+   display:flex;
+    width: 50%;
+    flex-direction: column;
+    height: 30vh;
+}
+#right{
+    display:flex;
+    width: 50%;
+   
+    justify-content: left;
+    
+}
+#imgcontain{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#image{
+    border: 2px double black;
+    display: flex;
+   
+    border-radius:100% ;
+    background-color: aqua;
+
+}
+
+/* -----------Counter Program------ */
+.counter{
+    text-align: center;
+}
+#countlabel{
+    display: block;
+    font-size: 60px;
+    text-align: center;
+}
+#countlabel ~ button{
+    margin-top: 20px;
+    justify-content: center;
+    background: rgba(0, 0, 255, 0.9);
+    font-size: 16px;
+    border-radius: 10px;
+    transition: scale 15ms;
+     
+}
+#countlabel ~ button:hover{
+    background: rgba(0, 0, 255, 0.7);
+    scale: 1.1;
+
+}
+#countCard{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 45px;
+}
