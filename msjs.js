@@ -1,4 +1,4 @@
-// window.alert("Welcome to it");
+window.alert("Welcome to it");
 
 // This is  a comment
 /*
@@ -9,37 +9,37 @@
      comment
 */
 // -------------assignment of values--------------//
-// let firstname = "David"
-// let age = 21;
-// age += 2;
-// let student = false;
-// let intro = `hello ${firstname} You are ${age} years old`;
-// console.log("Enrolled:", student);
+let firstname = "David";
+let myAge = 21;
+myAge += 2;
+let student = false;
+let intro = `hello ${firstname} You are ${myAge} years old`;
+console.log("Enrolled:", student);
 
 
 // /////-----Accepting user inputs---------------//
 
-// let username = window.prompt("Enter your name: ")
-// console.log(username)
+let username = window.prompt("Enter your name: ")
+console.log(username)
 
-// document.getElementById("button").onclick = function() {
-//      username = document.getElementById("input").value
-//      console.log(username)
-// };
+document.getElementById("button").onclick = function() {
+     username = document.getElementById("input").value
+     console.log(username)
+};
 
-// text = () => console.log(username);
-// document.getElementById("demo").innerHTML = intro;
+text = () => console.log(username);
+document.getElementById("demo").innerHTML = intro;
 
 
-//-----Data types------//
-// let age = prompt("Hey, what's your name: ")
-// console.log(typeof age);
-// console.log(typeof Number(age));
-// console.log(typeof Number("socmbb"))
-// console.log(Boolean(""))
+// -----Data types------//
+let age = prompt("Hey, what's your name: ")
+console.log(typeof age);
+console.log(typeof Number(age));
+console.log(typeof Number("socmbb"))
+console.log(Boolean(""))
 
-// let a = Number(prompt("Enter a number,a : "));
-// let b = Number(prompt("Enter a number,a : "));
+let a = Number(prompt("Enter a number,a : "));
+let b = Number(prompt("Enter a number,a : "));
 
 function submit(){
      let a = document.getElementById("at").value;
@@ -151,13 +151,13 @@ function grade(grade){
 } 
 
 // // --------Logical Operators(NOT)---------
-// let a = 6;
-// if(!(a == 7)){
-//      console.log("a is  not equal to", a);
-// }
-// else{
-//      console.log("a is  equal to", a);
-// }
+let z = 6;
+if(!(z == 7)){
+     console.log("a is  not equal to", z);
+}
+else{
+     console.log("a is  equal to", z);
+}
 
 //----- Do while loop and For loop-----
 doWhileLoop = () => {
@@ -198,12 +198,12 @@ function nestedForLoop(){
           document.getElementById("myColumn").innerHTML += "<br/>";
      }
 }
-// // toLocaleString
-// let myNum = 123.345
-// // myNum = myNum.toLocaleString("en-Us", {style: "currency", currency: "USD"});
-// // console.log(myNum);
-// myNum = myNum.toLocaleString(undefined, {style: "percent"});
+// toLocaleString
+let myNum = 123.345
+// myNum = myNum.toLocaleString("en-Us", {style: "currency", currency: "USD"});
 // console.log(myNum);
+myNum = myNum.toLocaleString(undefined, {style: "percent"});
+console.log(myNum);
 
  // ------------Guessing Game ---------------//
 
@@ -273,3 +273,87 @@ function lastName(lastname){
      console.log(lastname)
 }
 firstName("Dave", lastName)
+
+
+
+
+// -------------typing Animation--------------
+
+const text = "I am Arhin David";
+const typingSpeed = 100; // Adjust this value to control typing speed
+const caretBlinkSpeed = 500; // Adjust this value to control caret blink speed
+
+const typingContainer = document.getElementById("typing-text");
+let charIndex = 0;
+
+function typeText() {
+  if (charIndex < text.length) {
+    typingContainer.innerHTML += text.charAt(charIndex);
+    charIndex++;
+    setTimeout(typeText, typingSpeed);
+  } else {
+    setTimeout(1000);
+  }
+}
+
+function eraseText() {
+  if (charIndex > 0) {
+    typingContainer.innerHTML = text.substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(eraseText, typingSpeed / 2);
+  } else {
+    setTimeout(typeText, 500);
+  }
+}
+
+typeText();
+setInterval(() => {
+  const caret = document.getElementById("caret");
+  caret.style.display = (caret.style.display === "none") ? "inline" : "none";
+}, caretBlinkSpeed);
+
+async function f() {
+ let result = 'new!';
+ let promise = new Promise((resolve, reject) => {
+ setTimeout(() => resolve('done!'), 1000);
+ });
+result = await promise;
+console.log(result);
+}
+
+f();
+
+
+var p = new Promise((resolve, reject) => {
+reject(Error('Promise Fails!'))
+})
+p.catch(error => console.log(error.message))
+p.catch(error => console.log(error.message))
+
+
+
+const myPromise = () => Promise.resolve('I have resolved!');
+
+function firstFunction() {
+ myPromise().then(res => console.log(res));
+ console.log('second');
+}
+
+async function secondFunction() {
+ console.log(await myPromise());
+ console.log('second');
+}
+
+firstFunction();
+secondFunction();
+
+
+
+const firstPromise = new Promise((res, rej) => {
+ setTimeout(res, 500, 'one');
+});
+
+const secondPromise = new Promise((res, rej) => {
+ setTimeout(res, 100, 'two');
+});
+Promise.race([firstPromise, secondPromise]).then(res => console.log(res));
