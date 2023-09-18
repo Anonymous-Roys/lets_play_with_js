@@ -1,4 +1,4 @@
-window.alert("Welcome to it");
+// window.alert("Welcome to it");
 
 // This is  a comment
 /*
@@ -19,8 +19,10 @@ console.log("Enrolled:", student);
 
 // /////-----Accepting user inputs---------------//
 
-let username = window.prompt("Enter your name: ")
-console.log(username)
+// let username = window.prompt("Enter your name: ")
+// console.log(username)
+// document.getElementById("user").innerHTML = username
+
 
 document.getElementById("button").onclick = function() {
      username = document.getElementById("input").value
@@ -357,3 +359,16 @@ const secondPromise = new Promise((res, rej) => {
  setTimeout(res, 100, 'two');
 });
 Promise.race([firstPromise, secondPromise]).then(res => console.log(res));
+
+
+
+// ------------------form validation----------------------
+
+function validateForm() {
+     var validate = document.forms["myForm"]["firstname"].value;
+     if (validate == "") {
+          console.log("Please fill in your name");
+     } else {
+          console.log("You are done with the forms");
+     }
+}
