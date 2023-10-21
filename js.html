@@ -9,26 +9,26 @@
 </head>
 <body>
 	<!-- ------------------------------ -->
-	Welcome <span id="user"></span>!!!
-		<div class="typing-container">
+	
+		<div class="typing-container group">
+			Welcome <span id="user"></span>!!!
 			<p id="typing-text"></p>
 		</div>
+		<div class="group">
+			<div class="stuffs" id="stuffs">
 	
-	<!-- --------------------------------- -->
-    <p id="demo"></p>
-	<label for="name"m>Enter your name: </label>
-	<input type="text" id="input" name="name">
-	<button type="button" id ="button"> CLICK HERE</button><br/>
-	<label id = "a">Side A</label><br/>
-	<input type="text" id="at"><br/>
-	<label id = "b">Side B</label><br/>
-	<input type="text" id="bt"><br/>
-    <button id="submit" onclick="submit()">Submit</button><br/>
-	<label id = "c">Side C: </label><br/>
-    
+			</div>
+			<div class="search-container">
+				<input type="text" id="searchInput" placeholder="Search...">
+				<button id="searchButton">Search</button>
+			</div>
+			<div id="searchResults" class="results-container"></div>
+		</div>
+	
+	
     <!-- ------counter Program----- -->
-<div id = "countCard">
-	<div class="counter">
+
+	<div class="counter group">
 		<label for="label" id="countlabel">0</label>
 		<button id ="decrease" onclick="decrease()">decrease</button>
 		<button id ="reset" onclick="reset()">reset</button>
@@ -36,7 +36,7 @@
 
 	</div>
 
-	<div>
+	<div class="group">
 		<label for="checkbox">David</label>	
 		<input type="checkbox" id="checkbox"><br/>
 
@@ -51,8 +51,9 @@
 		<button id="checkbutton" for="checkbox">Submit</button>
 	</div>
 
-<label id="myColumn"></label>
-	<div id="guessingGame">
+	
+	<div id="guessingGame" class="group">
+		<label id="myColumn"></label>
 		<h3>Hi, Welcome to a guessing game</h3>
 		<p>Guess a number(positive integers) from <b>1 to 10</b></p>
 		<p>You have only three attempts</p>
@@ -61,9 +62,8 @@
 		<p id="display"></p>
 		<button type="submit" id="submitbtn" onclick="guessingGame()">Click To Guess</button>
 	</div>
-	<div>
-		<label for="">Enter a temperature</label>
-		<input type="text" id="tempValue">
+	<div class="group">
+		<input type="text" id="tempValue" placeholder="Enter a temperature">
 		<p>convert to:</p>
 		<input type="radio" name="temp" id="celsius">
 		<label for="temp">Celsius</label><br/>
@@ -73,16 +73,26 @@
 		<p id="tempAns"></p>
 	</div>
 
-</div>
-<form name="myForm" action="" onsubmit="return validateForm()" method="post">
-	First Name: <input type="text" name="firstname"><br/>
-	Last Name: <input type="text" name="lastname">
-	<input type="submit" value="Submit">
-</form>
-
-<div id="app">	
-</div>
-	
+	<div class="group">
+		<form name="myForm" action="" onsubmit="return validateForm()" method="post">
+			First Name: <input type="text" name="firstname"><br/><br/>
+			Last Name: <input type="text" name="lastname"><br/><br/>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+	<!-- --------------------------------- -->
+	<div class="group">
+		<p id="demo"></p>
+		<input type="text" id="input" name="name" placeholder="Enter your name"><br/>
+		<button type="button" id ="button"> CLICK HERE</button><br/>
+		<label id = "a">Side A</label><br/>
+		<input type="text" id="at"><br/>
+		<label id = "b">Side B</label><br/>
+		<input type="text" id="bt"><br/>
+		<button id="submit" onclick="submit()">Submit</button><br/>
+		<label id = "c">Side C: </label><br/>
+	</div>
+<!-- -------dice----- -->
 	<script src="msjs.js"></script>
 </body>
 </html>

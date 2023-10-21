@@ -1,42 +1,35 @@
 body{
     background-color: rgb(155, 145, 145);
-    color: rgb(0, 0, 0);
-}
-#main{
-    /*background-color: aquamarine;*/
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: row-reverse;
-    align-items: center;
-    height: 2S0vh;
-}
-#mine{
-   display:flex;
-    width: 50%;
     flex-direction: column;
-    height: 30vh;
+    justify-content: center;
 }
-#right{
-    display:flex;
-    width: 50%;
-   
-    justify-content: left;
-    
+.group{
+    border: 2px solid;
+    margin: 0.2rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    /* text-align: center; */
 }
-#imgcontain{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-#image{
-    border: 2px double black;
-    display: flex;
-   
-    border-radius:100% ;
-    background-color: aqua;
-
+/* styles.css */
+.search-container {
+    text-align: center;
+    margin: 20px;
 }
 
+.results-container, .stuffs {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+
+input{
+    border-radius: 0.6rem;
+    padding: 0.3rem;
+}
 /* -----------Counter Program------ */
 .counter{
     text-align: center;
