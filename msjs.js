@@ -278,6 +278,59 @@ firstName("Dave", lastName)
 
 
 
+//----The spread operator--
+let unpackingnum = [1,3,2,4,3,4,5,3,3,60]
+
+let maximum = Math.max(...unpackingnum);
+
+console.log(maximum);
+
+
+// I want to add class 1 to 2
+let class1 = [dave, arhin, kwabena]
+let class2 = [theo, arhin, Ben]
+
+class1.push(...class2)
+console.log(class1);
+
+
+// --rest parameters-- 
+
+
+a = 5
+b = 15
+c = 55
+d = 32
+
+function sum(...numbers){
+     let total = 0
+     for(let number of numbers){
+          total += number
+     }
+     return total
+}
+
+console.log(sum(a, b, c));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // -------------typing Animation--------------
 
