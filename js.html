@@ -9,12 +9,13 @@
 </head>
 <body>
 	<!-- ------------------------------ -->
-	Welcome <span id="user"></span>!!!
+
 		<div class="typing-container">
 			<p id="typing-text"></p>
 		</div>
 	
 	<!-- --------------------------------- -->
+	<div class="group">
     <p id="demo"></p>
 	<label for="name"m>Enter your name: </label>
 	<input type="text" id="input" name="name">
@@ -25,9 +26,9 @@
 	<input type="text" id="bt"><br/>
     <button id="submit" onclick="submit()">Submit</button><br/>
 	<label id = "c">Side C: </label><br/>
-    
+	</div>
     <!-- ------counter Program----- -->
-<div id = "countCard">
+
 	<div class="counter">
 		<label for="label" id="countlabel">0</label>
 		<button id ="decrease" onclick="decrease()">decrease</button>
@@ -51,8 +52,9 @@
 		<button id="checkbutton" for="checkbox">Submit</button>
 	</div>
 
-<label id="myColumn"></label>
+
 	<div id="guessingGame">
+		<label id="myColumn"></label>
 		<h3>Hi, Welcome to a guessing game</h3>
 		<p>Guess a number(positive integers) from <b>1 to 10</b></p>
 		<p>You have only three attempts</p>
@@ -61,8 +63,9 @@
 		<p id="display"></p>
 		<button type="submit" id="submitbtn" onclick="guessingGame()">Click To Guess</button>
 	</div>
-	<div class="group">
-		<input type="text" id="tempValue" placeholder="Enter a temperature">
+	<div>
+		<label for="">Enter a temperature</label>
+		<input type="text" id="tempValue">
 		<p>convert to:</p>
 		<input type="radio" name="temp" id="celsius">
 		<label for="temp">Celsius</label><br/>
@@ -72,7 +75,7 @@
 		<p id="tempAns"></p>
 	</div>
 
-</div>
+
 <form name="myForm" action="" onsubmit="return validateForm()" method="post">
 	First Name: <input type="text" name="firstname"><br/>
 	Last Name: <input type="text" name="lastname">
