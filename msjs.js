@@ -1,13 +1,169 @@
-// window.alert("Welcome to it");
+// -------------typing Animation--------------
 
-// This is  a comment
-/*
-     This 
-     is
-     a
-     multipline
-     comment
-*/
+const text = "I am Arhin David";
+const typingSpeed = 100; // Adjust this value to control typing speed
+const caretBlinkSpeed = 500; // Adjust this value to control caret blink speed
+
+const typingContainer = document.getElementById("typing-text");
+let charIndex = 0;
+
+function typeText() {
+  if (charIndex < text.length) {
+    typingContainer.innerHTML += text.charAt(charIndex);
+    charIndex++;
+    setTimeout(typeText, typingSpeed);
+  } else {
+    setTimeout(1000);
+  }
+}
+
+function eraseText() {
+  if (charIndex > 0) {
+    typingContainer.innerHTML = text.substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(eraseText, typingSpeed / 2);
+  } else {
+    setTimeout(typeText, 500);
+  }
+}
+
+typeText();
+setInterval(() => {
+  const caret = document.getElementById("caret");
+  caret.style.display = (caret.style.display === "none") ? "inline" : "none";
+}, caretBlinkSpeed);
+
+async function f() {
+ let result = 'new!';
+ let promise = new Promise((resolve, reject) => {
+ setTimeout(() => resolve('done!'), 1000);
+ });
+result = await promise;
+console.log(result);
+}
+
+f();
+
+
+var p = new Promise((resolve, reject) => {
+reject(Error('Promise Fails!'))
+})
+p.catch(error => console.log(error.message))
+p.catch(error => console.log(error.message))
+
+
+
+const myPromise = () => Promise.resolve('I have resolved!');
+
+function firstFunction() {
+ myPromise().then(res => console.log(res));
+ console.log('second');
+}
+
+async function secondFunction() {
+ console.log(await myPromise());
+ console.log('second');
+}
+
+firstFunction();
+secondFunction();
+
+
+
+const firstPromise = new Promise((res, rej) => {
+ setTimeout(res, 500, 'one');
+});
+
+const secondPromise = new Promise((res, rej) => {
+ setTimeout(res, 100, 'two');
+});
+Promise.race([firstPromise, secondPromise]).then(res => console.log(res));
+
+// ----------------Search Algorithm-------------------------
+
+
+// Sample data for searching
+const data = [
+     "Apple",
+     "Banana",
+     "Cherry",
+     "Date",
+     "Elderberry",
+     "Fig",
+     "Grapes",
+     "Honeydew",
+     "Kiwi",
+     "Lemon",
+     "Mango",
+     "Orange",
+     "Peach",
+     "Pear",
+     "Quince",
+     "Raspberry",
+     "Strawberry",
+     "Tangerine",
+     "Ugli fruit",
+     "Watermelon"
+ ];
+ let showStuffs = document.getElementById("stuffs");
+ 
+ for (let i = 0; i < data.length; i++) {
+     fruit = data[i]
+     ele = document.createElement('li');
+     ele.textContent = fruit
+     showStuffs.appendChild(ele);
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ // Function to perform the search
+ function performSearch(query) {
+     const results = data.filter(item => item.toLowerCase().includes(query.toLowerCase()));
+     displayResults(results);
+ }
+ 
+ // Function to display search results on the page
+ function displayResults(results) {
+     const resultsContainer = document.getElementById("searchResults");
+     resultsContainer.innerHTML = "";
+ 
+     if (results.length === 0) {
+         resultsContainer.innerHTML = "No results found.";
+     } else {
+         results.forEach(result => {
+             const resultElement = document.createElement("div");
+             resultElement.textContent = result;
+             resultsContainer.appendChild(resultElement);
+         });
+     }
+ }
+ 
+ // Event listeners for search input and button
+ const searchInput = document.getElementById("searchInput");
+ const searchButton = document.getElementById("searchButton");
+ 
+ searchButton.addEventListener("click", () => {
+     performSearch(searchInput.value);
+ });
+ 
+ searchInput.addEventListener("keyup", event => {
+     if (event.key === "Enter") {
+         performSearch(searchInput.value);
+     }
+ });
+ 
+
+
+// ----------------Search Algorithm-------------------------
+
+
 // -------------assignment of values--------------//
 let firstname = "David";
 let myAge = 21;
@@ -126,7 +282,7 @@ document.getElementById("checkbutton").onclick = function(){
      }
 }
 //------Using switch methods----
-grade = "A"
+
 function grade(grade){
      switch(grade.toUpperCase()){
           case "A":
@@ -207,9 +363,9 @@ let myNum = 123.345
 myNum = myNum.toLocaleString(undefined, {style: "percent"});
 console.log(myNum);
 
-
-
  // ------------Guessing Game ---------------//
+
+
 function guessingGame(){  
      let answer = Math.floor(Math.random() * 10 + 1);
      let guess = document.getElementById("inputGuess").value;   
@@ -278,87 +434,73 @@ firstName("Dave", lastName)
 
 
 
+//----The spread operator--
+let unpackingnum = [1,3,2,4,3,4,5,3,3,60]
 
-// -------------typing Animation--------------
+let maximum = Math.max(...unpackingnum);
 
-const text = "I am Arhin David";
-const typingSpeed = 100; // Adjust this value to control typing speed
-const caretBlinkSpeed = 500; // Adjust this value to control caret blink speed
+console.log(maximum);
 
-const typingContainer = document.getElementById("typing-text");
-let charIndex = 0;
 
-function typeText() {
-  if (charIndex < text.length) {
-    typingContainer.innerHTML += text.charAt(charIndex);
-    charIndex++;
-    setTimeout(typeText, typingSpeed);
-  } else {
-    setTimeout(1000);
-  }
+// I want to add class 1 to 2
+let class1 = [dave, arhin, kwabena]
+let class2 = [theo, arhin, Ben]
+
+class1.push(...class2)
+console.log(class1);
+
+
+// --rest parameters-- 
+
+
+a = 5
+b = 15
+c = 55
+d = 32
+
+function sum(...numbers){
+     let total = 0
+     for(let number of numbers){
+          total += number
+     }
+     return total
 }
 
-function eraseText() {
-  if (charIndex > 0) {
-    typingContainer.innerHTML = text.substring(0, charIndex - 1);
-    charIndex--;
-    setTimeout(eraseText, typingSpeed / 2);
-  } else {
-    setTimeout(typeText, 500);
-  }
-}
-
-typeText();
-setInterval(() => {
-  const caret = document.getElementById("caret");
-  caret.style.display = (caret.style.display === "none") ? "inline" : "none";
-}, caretBlinkSpeed);
-
-async function f() {
- let result = 'new!';
- let promise = new Promise((resolve, reject) => {
- setTimeout(() => resolve('done!'), 1000);
- });
-result = await promise;
-console.log(result);
-}
-
-f();
+console.log(sum(a, b, c));
 
 
-var p = new Promise((resolve, reject) => {
-reject(Error('Promise Fails!'))
-})
-p.catch(error => console.log(error.message))
-p.catch(error => console.log(error.message))
+// Select the div element with 'app' id
+      const app = document.getElementById('app');
+ 
+      // Create a new H1 element
+      const header = document.createElement('h1');
+ 
+      // Create a new text node for the H1 element
+      const texts = 'Develop. Preview. Ship. 🚀';
+      const headerContent = document.createTextNode(texts);
+ 
+      // Append the text to the H1 element
+      header.appendChild(headerContent);
+ 
+      // Place the H1 element inside the div
+      app.appendChild(header);
 
 
 
-const myPromise = () => Promise.resolve('I have resolved!');
-
-function firstFunction() {
- myPromise().then(res => console.log(res));
- console.log('second');
-}
-
-async function secondFunction() {
- console.log(await myPromise());
- console.log('second');
-}
-
-firstFunction();
-secondFunction();
 
 
 
-const firstPromise = new Promise((res, rej) => {
- setTimeout(res, 500, 'one');
-});
 
-const secondPromise = new Promise((res, rej) => {
- setTimeout(res, 100, 'two');
-});
-Promise.race([firstPromise, secondPromise]).then(res => console.log(res));
+
+
+
+
+
+
+
+
+
+
 
 
 
