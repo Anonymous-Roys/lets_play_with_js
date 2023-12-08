@@ -66,6 +66,9 @@ input{
     font-family: Arial, sans-serif;
     color: black;
 }
+input[type="submit"]{
+    
+}
 
 @keyframes typing {
     from {
