@@ -11,6 +11,16 @@ body{
     padding: 1rem;
     /* text-align: center; */
 }
+.
+#dark{
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 24px;
+}
+#dark:hover{
+    background-color: rgb(20, 20, 3);
+    color: rgb(255, 255, 255);
+}
 /* styles.css */
 .search-container {
     text-align: center;
